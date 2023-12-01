@@ -39,12 +39,12 @@ const Search = () => {
     <>
       <Header isLogggedIn={true} search={true} />
       <div className="w-full h-screen  bg-black">
-        <div className="w-full  flex  justify-center text-white">
-          <div className="w-1/3 h-20  absolute top-20 flex-col flex align-middle ">
+        <div className="w-full flex justify-center text-white">
+          <div className="w-2/3 md:2/3 lg:1/3 h-20  absolute top-20 flex-col flex align-middle ">
             <input
               type="text"
               placeholder="Search...."
-              className="w-[100%] p-2 my-4 mb-1 bg-gray-700 border-black"
+              className="w-[100%] md:w-[75%] lg:w-[100%] p-2 my-4 mb-1 bg-gray-700 border-black"
               value={query}
               onChange={handleChange}
             />
@@ -54,7 +54,7 @@ const Search = () => {
                   {suggestionList?.map((item) => {
                     return (
                       <div
-                        className="w-[100%] px-2 py-1 bg-gray-700 text-white border-black cursor-pointer hover:bg-white hover:text-gray-700"
+                        className="w-[100%] md:w-[75%] lg:w-[100%] px-2 py-1 bg-gray-700 text-white border-black cursor-pointer hover:bg-white hover:text-gray-700"
                         key={item?.id}
                         onClick={() => handleSelection(item?.id)}
                       >
@@ -69,12 +69,12 @@ const Search = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-28 absolute top-40 flex justify-center align-middle px-12">
+        <div className="w-full mt-28 absolute top-20 md:top-35 lg:top-40 flex justify-center align-middle px-8 md:px-10 lg:px-12 ">
           {selectedMovie && (
             <>
               <div className="text-white">
-                <p className="text-3xl"> {selectedMovie?.original_title}</p>
-                <p className="w-min-20 w-2/3 text-lg mt-10">
+                <p className="text-2xl md:text-3xl lg:text-3xl"> {selectedMovie?.original_title}</p>
+                <p className="w-min-20 w-3/3 md:w-2/3 lg:w-2/3 text-sm md:text-md lg:text-lg mt-10">
                   {selectedMovie?.overview}
                 </p>
                 <p className="">Release date : {selectedMovie?.release_date}</p>

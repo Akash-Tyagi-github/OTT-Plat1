@@ -91,14 +91,14 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/c906271d-7184-4eec-83c9-b6d4c1a068ec/728874a6-eeda-400a-9bcf-a935a1408a4f/IN-en-20231127-popsignuptwoweeks-perspective_alpha_website_large.jpg" />
+      <div className="absolute w-full h-full">
+        <img className="w-full h-full" src="https://assets.nflxext.com/ffe/siteui/vlv3/c906271d-7184-4eec-83c9-b6d4c1a068ec/728874a6-eeda-400a-9bcf-a935a1408a4f/IN-en-20231127-popsignuptwoweeks-perspective_alpha_website_large.jpg" />
       </div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="w-3/12 absolute p-12 mx-auto left-0 right-0 my-24 bg-black bg-opacity-80 text-white"
+        className="w-8/12 md:w-3/12 lg:3/12 absolute p-8 md:p-10 lg:p-12 mx-auto left-0 right-0 my-24  bg-opacity-80 text-white  bg-black"
       >
         <h1 className="text-3xl font-bold">
           {isSignInForm ? "Sign in" : "Sign up"}

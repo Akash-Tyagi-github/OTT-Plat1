@@ -41,15 +41,15 @@ const Header = ({ isLogggedIn, search, watch }) => {
     navigate("/search");
   };
   return (
-    <div className="absolute w-full px-12 p-2 bg-gradient-to-b from-black z-30 flex justify-between">
-      <img className="w-36" src={LOGO} />
+    <div className="absolute w-full px-4 md:px-10 lg:px-12 p-2 bg-gradient-to-b from-black z-30 flex justify-between">
+      <img className="w-28 md:w-32 lg:w-36" src={LOGO} />
       {isLogggedIn && (
         <div>
           <button
             className={
               watch
                 ? "hidden"
-                : "bg-red-700 mt-2 me-2 h-10 text-white font-bold px-3 rounded-md"
+                : "bg-red-700 mt-2 me-2 h-10 text-white font-normal md:font-bold lg:font-bold px-1 md:px-2 lg:px-3 rounded-md"
             }
             onClick={() => navigate("/video-player")}
           >
@@ -59,15 +59,14 @@ const Header = ({ isLogggedIn, search, watch }) => {
             className={
               search
                 ? "hidden"
-                : "bg-red-700 mt-2 me-2 h-10 text-white font-bold px-3 rounded-md"
+                : "bg-red-700 mt-2 me-2 h-10 text-white font-normal px-2 md:font-bold lg:font-bold  first-line:px-3 rounded-md"
             }
-            // className="bg-red-700 mt-2 me-2 h-10 text-white font-bold px-3 rounded-md"
             onClick={handleSearch}
           >
             Search
           </button>
           <button
-            className="bg-red-700 mt-2 me-2 h-10 text-white font-bold px-3 rounded-md"
+            className="bg-red-700 mt-2 me-2 h-10 text-white font-normal  md:font-bold lg:font-bold px-3 rounded-md"
             onClick={handleLogout}
           >
             Logout

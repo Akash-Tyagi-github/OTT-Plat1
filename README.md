@@ -7,6 +7,6 @@
 6-Browse page -listing movies
 7-Search page - dynamic search functionality with auto suggestion
 8-Video page - supports video controls
-
+9-Used Tailwind CSS
 
 

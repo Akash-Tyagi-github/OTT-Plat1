@@ -18,5 +18,3 @@ const VideoPlayer = () => {
 };
 
 export default VideoPlayer;
-
-// Render a YouTube video player
